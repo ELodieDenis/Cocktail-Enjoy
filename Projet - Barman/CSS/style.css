@@ -1,0 +1,466 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+}
+
+/* HEADER */
+.header {
+    background: rgba(72, 72, 72, 0.531);
+    display: flex;
+    border-bottom: 2px solid rgba(225, 225, 225, .2);
+}
+
+.logo {
+    width: 60%;
+    height: auto;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+.menu-icone {
+    display: none;
+}
+
+.fermeture-menu-icone {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    width: 50%;
+    height: 60px;
+    align-items: right;
+    margin-left: auto;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(254, 254, 254);
+    padding: 2%;
+    padding-top: 35px;
+    width: 100%;
+}
+
+.navbar a:hover {
+    color: yellow;
+}
+
+/* Points d'arrêt */
+@media (max-width : 770px) {
+    .icone_header {
+    display: flex;
+    }
+
+    .menu-icone {
+        display: flex;
+        position : absolute;
+        right: 0;
+        padding-right: 4%;
+        padding-top: 30px;
+    }
+
+    .menu-icone:hover {
+        cursor: pointer;
+        display: flex;
+    }
+
+    .fermeture-menu-icone {
+        display: none;
+        position : absolute;
+        right: 0;
+        padding-right: 4%;
+        padding-top: 30px;
+    }
+
+    .fermeture-menu-icone:hover {
+        cursor: pointer;
+        display: none;
+    }
+
+    .navbar {
+        display: none ;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: .5rem 3%;
+        top: 13.5%;
+        flex-direction: column;
+    }
+
+    .navbar a{
+        color: white;
+    }
+
+    .navbar a:hover {
+        color: yellow;
+        display: flex;
+        z-index: 1;
+    }  
+}
+
+
+
+/* BODY */
+body {
+    background: rgba(0, 0, 0, 0.883);
+}
+
+/* Image du barman derrière le comptoir */
+.image_dans_body {
+    position: relative;
+    display: grid;
+}
+
+.barman_comptoir {
+    justify-content: center;
+    display: flex;
+}
+
+.barman_comptoir img{
+    display: flex;
+}
+
+/* Images des cocktails */
+.images_cocktails {
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    top: 113vh;
+    gap: 16px;
+    justify-content: center;
+    z-index: 1;
+    padding-bottom: 15px;
+}
+
+.images_cocktails img {
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* Mettre en place les h3 et p des images de cocktails */
+.images_cocktails h3,
+.images_cocktails p{
+    display: none;
+}
+
+.images_cocktails:hover {
+    display: flex;
+    position: absolute;
+    flex: 1;
+    z-index: 1;
+}
+
+.images_cocktails:hover img {
+    cursor: pointer;
+    transform: none;
+    /* left: 50%;
+    top: 50%; */
+}
+
+/* Faire apparaître le rectangle des commentaires sur cocktails  */
+.rectangle1,
+.rectangle2,
+.rectangle5 {
+    display: none;
+    width: 250px;
+    border: none;
+    margin: -260px auto;
+}
+
+.rectangle3,
+.rectangle4{
+    display: none;
+    width: 250px;
+    border: none;
+    margin: -280px auto;
+}
+
+.rectangle1 img,
+.rectangle2 img,
+.rectangle3 img,
+.rectangle4 img,
+.rectangle5 img {
+    width: 250px;
+    height: auto;
+    /* border: none; */
+}
+
+.rectangle1:hover,
+.rectangle2:hover,
+.rectangle3:hover,
+.rectangle4:hover,
+.rectangle5:hover {
+    display: flex;
+    top: 100vh;
+    z-index: 1;
+    position: relative;
+}
+
+
+
+/* Gérer l'opacité et l'apparition de h3 et p sur "cocktail_piment" */
+#id_cocktail_1 {
+    border : 3px solid #F3E5A4;
+    border-radius: 10px;
+}
+
+.cocktail_piment:hover h3 {
+    opacity: 1;
+    display: flex;
+    max-width: 250px;
+    transform: translateY(-800%);
+    padding-left: 5px;
+}
+
+.cocktail_piment:hover p {
+    opacity: 1;
+    display: flex;
+    max-width: 250px;
+    transform: translateY(-460%);
+    padding-left: 5px;
+}
+
+/* Gérer l'apparition de h3 et p sur "cocktail_rhum" */
+#id_cocktail_2 {
+    border : 3px solid #F3E5A4;
+    border-radius: 10px;
+}
+
+.cocktail_rhum:hover p{
+    opacity: 1;
+    display: flex;
+    max-width: 250px;
+    transform: translateY(-460%);
+    padding-left: 5px;
+}
+
+.cocktail_rhum:hover h3 {
+    opacity: 1;
+    display: flex;
+    max-width: 250px;
+    transform: translateY(-800%);
+    padding-left: 5px;
+}
+
+/* Gérer l'apparition de h3 et p sur "cocktail_fruit_de_la_passion" */
+#id_cocktail_3 {
+    border : 3px solid #F3E5A4;
+    border-radius: 10px;
+}
+
+.cocktail_fruit_de_la_passion:hover h3 {
+    opacity: 1;
+    display: flex;
+    max-width: 250px;
+    transform: translateY(-800%);
+    padding-left: 5px;
+}
+
+.cocktail_fruit_de_la_passion:hover p {
+    opacity: 1;
+    display: flex;
+    max-width: 250px;
+    transform: translateY(-300%);
+    padding-left: 5px;
+}
+
+
+/* Gérer l'apparition de h3 et p sur "cocktail_menthe_citron" */
+#id_cocktail_4 {
+    border : 3px solid #F3E5A4;
+    border-radius: 10px;
+}
+
+
+.cocktail_menthe_citron:hover h3 {
+    opacity: 1;
+    display: flex;
+    max-width: 250px;
+    transform: translateY(-430%);
+    padding-left: 5px;
+}
+
+.cocktail_menthe_citron:hover p {
+    opacity: 1;
+    display: flex;
+    max-width: 250px;
+    transform: translateY(-500%);
+    padding-left: 5px;
+}
+
+/* Gérer l'apparition de h3 et p sur "cocktail_menthe_citron" */
+#id_cocktail_5 {
+    border : 3px solid #F3E5A4;
+    border-radius: 10px;
+}
+
+.cocktail_rose:hover h3{
+    opacity: 1;
+    display: flex;
+    max-width: 250px;
+    transform: translateY(-830%);
+    padding-left: 5px;
+}
+
+
+.cocktail_rose:hover p {
+    opacity: 1;
+    display: flex;
+    max-width: 250px;
+    transform: translateY(-470%);
+    padding-left: 5px;
+}
+
+
+/* FOOTER */
+footer {
+    top: 1250px;
+    width: 100%;
+    display: inline-block;
+    background-color: white;
+    position: absolute;
+}
+
+/* Footer haut */
+.footer_haut {
+    display: flex;
+    background: rgb(72, 72, 72);
+    height: 50px;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+/* Gérer telephone et email dans footer*/
+.image_telephone,
+.image_email, 
+.form_footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: white;
+}
+
+.image_email {
+    border-right: solid 3px rgb(255, 255, 255);
+}
+
+.image_telephone {
+    border-right: solid 3px rgb(255, 255, 255);
+}
+
+.telephone,
+.email {
+    display: block;
+}
+
+.telephone p:hover,
+.email p:hover {
+    text-decoration: underline 1px;
+    cursor: pointer;
+}
+
+#image_telephone,
+#image_email {
+    width: 40px;
+    height: auto;
+    padding-right: 8px;
+}
+
+
+/* Gérer formulaire dans footer */
+.form_footer {
+    display: flex;
+    align-items: center;
+}
+
+#formulaire {
+    width: 150px;
+    height: 30px;
+    border: solid 0px black;
+    border-radius: 3px;
+    color: black;
+}
+
+#formulaire:hover {
+    cursor: pointer;
+    background-color: yellow;
+}
+
+
+/* Footer bas */
+.footer_bas {
+    display: flex;
+    height: 250px;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.883);
+    padding-top: 40px;
+}
+
+.logo_cocktail_enjoy {
+    display: grid;
+    width: 200px;
+    height: auto;
+    justify-content: center; 
+    padding-top: 60px;
+    padding-left: 70px;
+}
+
+/* Navigation */
+.nav_footer {
+    display: grid;
+    width: 200px;
+    grid-template-rows: 1fr;
+    height: 100px;
+    color: white;
+    padding-top: 40px;
+}
+
+.nav_footer h3 {
+    height: 40px;
+}
+
+.nav_footer a {
+    height: 20px;
+    text-decoration: none;
+    color: rgb(255, 254, 254);
+    padding-top: 7px;
+}
+
+.nav_footer a:hover {
+    color: yellow;
+}
+
+/* Qualifications */
+.qualifications_footer h3 {
+    padding-top: 40px;
+    padding-left: 10px;
+}
+
+.qualifications_footer {
+    color: white;
+}
+
+.qualifications_footer img {
+    width: 200px;
+    height: auto;
+    padding: 10px;
+}
+
+/* Réseaux sociaux */
+.reseaux_sociaux {
+    padding-right: 30px;
+    padding-top: 150px;
+    color: white;
+}
+
+.reseaux_sociaux img{
+    padding: 8px;
+    width: 40px;
+    height: auto;
+}
